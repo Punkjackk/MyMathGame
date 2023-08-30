@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathGame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "all">
+        <div class = "Mathbox">
+            <div class = "head">
+                <h1>Math Game</h1>
+            </div>
+            <div class = "containerItem1-2">
+                <div class = "item1">
+                    <button type = "button" class = "startbutton" onclick="restart()" onfocus="bold(this)" onblur="unbold(this);">เริ่มเกม</button>
+                </div>
+                <div class = "item2">
+                    <p>คะแนน<br><br>
+                        <span id="score">0</span>/<span id="point">0</span>
+                    </p>
+                </div>
+            </div>
+            <div class = "exam">
+                <p><span id="num1" class="number">0</p></button>
+            
+                <p  class="mark"><span id = "showmark"></span></p>
+
+                <p><span id="num2" class="number">0</p></button>
+
+                <p class="mark">=</p>
+                <input type="text" class="textbox" id="answer" placeholder="คำตอบ" onfocus="bold(this); " onblur="unbold(this);">
+            </div>
+            <div class = "option">
+                <p>เครื่องหมาย :</p>
+                <input type="radio" name="chioce" id="plus" value="+" onclick="radiomark('+');" />
+                <p>+</p>
+                <input type="radio" name="chioce" id="minus" value="-" onclick="radiomark('-');" />
+                <p>-</p>
+                <input type="radio" name="chioce" id="time" value="*" onclick="radiomark('*');" />
+                <p>*</p>
+                <input type="radio" name="chioce" id="divi" value="/" onclick="radiomark('/');" />
+                <p>/</p>
+            </div>
+            <div class = "answer">
+                <button type = "button" class = "answerbutton" onclick="ans()" onfocus="bold(this); " onblur="unbold(this);">ตอบ</button>
+            </div>
+            <div class = "finish">
+                <div class = "boolean">
+                    <p>ผลลัพธ์ : </p>
+                </div>
+                <div class = "result">
+                    <p><span id = "result"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src = 'app.js'></script>
+</body>
+</html>
